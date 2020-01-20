@@ -14,7 +14,7 @@ public class heartbeatsource : MonoBehaviour
     public float minTijdAan = 5;
     public float maxTijdAan = 15;
     float tijdAan;
-    public float minVol = 0.5f;
+    public float minVol = 1f;
     public float maxVol = 1;
     float hbvolume;
     public float timer;
@@ -40,7 +40,7 @@ public class heartbeatsource : MonoBehaviour
         {
             if (heartbeatplaying)
             {
-                StartCoroutine(fadeheartbeat(hearbeatsound.volume, 0, fadeTime));
+                StartCoroutine(fadeheartbeat(hearbeatsound.volume, 1, fadeTime));
                 heartbeatplaying = false;
                 RandomValue();
                 naarvolgende = tijdUit + fadeTime;
@@ -48,7 +48,7 @@ public class heartbeatsource : MonoBehaviour
             }
             else if (!heartbeatplaying)
             {
-                StartCoroutine(fadeheartbeat(0, hbvolume, fadeTime));
+                StartCoroutine(fadeheartbeat(1, hbvolume, fadeTime));
                 heartbeatplaying = true;
                 RandomValue();
                 naarvolgende = tijdAan + fadeTime;

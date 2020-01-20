@@ -10,6 +10,6 @@ public class SceneChanger : MonoBehaviour
     public SteamVR_Action_Boolean m_ToggleAction;
        public void changeScene(string SceneName)
    {
-       SceneManager.LoadScene(SceneName);
+       SceneManager.LoadScene(1);
    }
 }
