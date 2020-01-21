@@ -13,7 +13,9 @@ public class Flower : MonoBehaviour
         {
             Debug.Log("Completed!");
             finalpanel.SetActive(true);
+
             victory.Play();
+
            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
        }
     }
